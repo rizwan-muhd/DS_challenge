@@ -1,0 +1,3 @@
+class linkedList{
+    let data;
+}
