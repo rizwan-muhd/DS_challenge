@@ -12,10 +12,16 @@ class LinkedList {
 
   // insert data
 
-  insertData(data) {
+  insertFirstData(data) {
     const newNode = new Node(data);
     newNode.next = this.head;
     this.head = newNode;
+  }
+
+  insertLastData() {
+    const newNode = new Node(data);
+    if (!this.head) {
+    }
   }
 
   display() {
