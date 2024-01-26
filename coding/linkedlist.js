@@ -21,6 +21,45 @@ class LinkedList {
   insertLastData() {
     const newNode = new Node(data);
     if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+
+    current.next = newNode;
+  }
+
+  size() {
+    let count = 0;
+    let current = this.head;
+    while (current.next) {
+      count++;
+      current = current.next;
+    }
+
+    return count;
+  }
+
+  addAt(index, data) {
+    if (index < 0 || index > this.size()) {
+      console.log("invalid index");
+      return;
+    }
+
+    const newNode = new Node(data);
+    if (index === 0) {
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
     }
   }
 
