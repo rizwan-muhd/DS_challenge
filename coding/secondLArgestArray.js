@@ -1,4 +1,4 @@
-const array = [-4, -1, -6, -5, -9, -2];
+const array = [81, 9, 4, 7, 45, 245];
 
 const secondLargest = () => {
   let largest = array[0];
