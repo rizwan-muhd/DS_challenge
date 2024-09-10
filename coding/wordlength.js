@@ -130,25 +130,46 @@
 // j 3
 // i 4
 
-var moveZeroes = function (nums) {
-  let j = 0; // Pointer to place the next non-zero element
+// var moveZeroes = function (nums) {
+//   let j = 0; // Pointer to place the next non-zero element
 
-  // First pass: Move non-zero elements to the front of the array
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== 0) {
-      nums[j] = nums[i];
-      j++;
+//   // First pass: Move non-zero elements to the front of the array
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] !== 0) {
+//       nums[j] = nums[i];
+//       j++;
+//     }
+//     console.log("asdf", nums);
+//   }
+//   console.log("asdf", nums);
+//   // Second pass: Fill the remaining positions with zeros
+//   for (let i = j; i < nums.length; i++) {
+//     nums[i] = 0;
+//   }
+// };
+
+// // Example usage:
+// const nums = [0, 1, 0, 3, 12];
+// moveZeroes(nums);
+// console.log(nums);
+const nums1 = [4, 9, 5],
+  nums2 = [9, 4, 9, 8, 4];
+var intersect = function (nums1, nums2) {
+  const countMap = new Map();
+  const result = [];
+
+  for (let num of nums1) {
+    countMap.set(num, (countMap.get(num) || 0) + 1);
+  }
+  console.log(countMap);
+  for (let num of nums2) {
+    if (countMap.get(num) > 0) {
+      result.push(num);
+      countMap.set(num, countMap.get(num) - 1); // Decrease the count
     }
-    console.log("asdf", nums);
   }
-  console.log("asdf", nums);
-  // Second pass: Fill the remaining positions with zeros
-  for (let i = j; i < nums.length; i++) {
-    nums[i] = 0;
-  }
+  console.log(result);
+  return result;
 };
 
-// Example usage:
-const nums = [0, 1, 0, 3, 12];
-moveZeroes(nums);
-console.log(nums);
+intersect(nums1, nums2);
