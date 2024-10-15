@@ -26,6 +26,38 @@ const bestTimeToBuyStock = (prices) => {
   console.log(profit);
 };
 
-const prices = [7, 6, 4, 3, 1];
+// const prices = [7, 6, 4, 3, 1];
 
-bestTimeToBuyStock(prices);
+// bestTimeToBuyStock(prices);
+
+//3151. Special Array I
+
+// const nums = [2, 1, 4];
+
+var isArraySpecial = function (nums) {
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] % 2 === nums[i - 1] % 2) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+// const res = isArraySpecial(nums);
+// console.log(res);
+
+//2057. Smallest Index With Equal Value
+
+const nums = [4, 3, 2, 1];
+var smallestEqual = function (nums) {
+  for (let i = 0; i < nums.length; i++) {
+    if (i % 10 === nums[i]) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const res = smallestEqual(nums);
+console.log(res);
