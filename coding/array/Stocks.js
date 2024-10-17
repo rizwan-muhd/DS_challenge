@@ -49,7 +49,7 @@ var isArraySpecial = function (nums) {
 
 //2057. Smallest Index With Equal Value
 
-const nums = [4, 3, 2, 1];
+// const nums = [4, 3, 2, 1];
 var smallestEqual = function (nums) {
   for (let i = 0; i < nums.length; i++) {
     if (i % 10 === nums[i]) {
@@ -59,5 +59,18 @@ var smallestEqual = function (nums) {
   return -1;
 };
 
-const res = smallestEqual(nums);
-console.log(res);
+// const res = smallestEqual(nums);
+// console.log(res);
+const nums = [-4, -2, 1, 4, 8];
+var findClosestNumber = function(nums) {
+   let smallest = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+     if (Math.abs(nums[i]) < Math.abs(smallest) || 
+       (Math.abs(nums[i]) === Math.abs(smallest) && nums[i] > smallest)) {
+      smallest = nums[i];
+    }}
+  console.log(smallest);
+  return smallest;
+};
+
+findClosestNumber(nums);
