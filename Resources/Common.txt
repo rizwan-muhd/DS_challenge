@@ -1,0 +1,3 @@
+Difference between Framework and libarry
+->The main difference between a framework and a library is that a framework provides a structure for building an application, while a library is a collection of tools for performing specific tasks
+-> Library contains modules 

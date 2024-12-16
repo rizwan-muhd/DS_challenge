@@ -19,7 +19,7 @@ const changeWordOrder = (s) => {
   console.log(result);
   return result;
 };
-const s = "hd fkdkjf sj  hello world jh ";
+const s = "i am rizwan ";
 // rizwan am i
 const res = changeWordOrder(s);
 // console.log(res);

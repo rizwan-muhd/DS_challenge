@@ -4,7 +4,7 @@
 // const ExcelJS = require("exceljs");
 // const app = express();
 
-const { lstat } = require("fs");
+// const { lstat } = require("fs");
 
 // app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -48,66 +48,86 @@ const { lstat } = require("fs");
 // find the sum of prime number
 // n = 10
 // 2,3,5,7,11,13,17,19,23,29
-const checkPrime = (num1) => {
-  if (num1 < 2) {
-    return false;
-  }
+// const checkPrime = (num1) => {
+//   if (num1 < 2) {
+//     return false;
+//   }
 
-  for (let i = 2; i < num1; i++) {
-    if (num1 % i === 0) {
-      return false;
+//   for (let i = 2; i < num1; i++) {
+//     if (num1 % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// const sumOfPrimeNumber = (num) => {
+//   let sum = 0;
+//   let k = 0;
+//   let number = 2;
+//   while (k < num) {
+//     const res = checkPrime(number);
+
+//     if (res) {
+//       sum = sum + number;
+//       k++;
+//     }
+//     number++;
+//   }
+
+//   console.log(sum);
+// };
+
+// const num = 1;
+
+// // sumOfPrimeNumber(num);
+
+// // const num1 = 7;
+// // const res = checkPrime(num1);
+// // console.log(res);
+
+// const changeWordOrder = (s) => {
+//   let result = "";
+//   let word = "";
+
+//   for (let i = s.length - 1; i >= 0; i--) {
+//     if (s[i] === " ") {
+//       if (word !== "") {
+//         result += word + " ";
+//         word = "";
+//       }
+//     } else {
+//       word = s[i] + word;
+//     }
+//   }
+
+//   if (word !== "") {
+//     result += word;
+//   }
+//   console.log(result);
+//   return result;
+// };
+// const s = "hd fkdkjf sj  hello world jh ";
+// // rizwan am i
+
+const arr1 = [2, 6, 13, 5, 8];
+
+const findSecondLarge = () => {
+  let secondLarge = null;
+  let large = arr1[0];
+  for (let i = 1; i < arr1.length; i++) {
+    if (arr1[i] < large) {
+      secondLarge = large;
+      large = arr1[i];
+    } else if (
+      (secondLarge === null || arr1[i] < secondLarge) &&
+      arr1[i] > large
+    ) {
+      secondLarge = arr1[i];
     }
   }
-  return true;
+
+  console.log(secondLarge);
 };
 
-const sumOfPrimeNumber = (num) => {
-  let sum = 0;
-  let k = 0;
-  let number = 2;
-  while (k < num) {
-    const res = checkPrime(number);
-
-    if (res) {
-      sum = sum + number;
-      k++;
-    }
-    number++;
-  }
-
-  console.log(sum);
-};
-
-const num = 1;
-
-// sumOfPrimeNumber(num);
-
-// const num1 = 7;
-// const res = checkPrime(num1);
-// console.log(res);
-
-const changeWordOrder = (s) => {
-  let result = "";
-  let word = "";
-
-  for (let i = s.length - 1; i >= 0; i--) {
-    if (s[i] === " ") {
-      if (word !== "") {
-        result += word + " ";
-        word = "";
-      }
-    } else {
-      word = s[i] + word;
-    }
-  }
-
-  if (word !== "") {
-    result += word;
-  }
-  console.log(result);
-  return result;
-};
-const s = "hd fkdkjf sj  hello world jh ";
-// rizwan am i
-const res = changeWordOrder(s);
-// console.log(res);
+findSecondLarge(arr1);

@@ -62,15 +62,39 @@ var smallestEqual = function (nums) {
 // const res = smallestEqual(nums);
 // console.log(res);
 const nums = [-4, -2, 1, 4, 8];
-var findClosestNumber = function(nums) {
-   let smallest = nums[0];
+var findClosestNumber = function (nums) {
+  let smallest = nums[0];
   for (let i = 1; i < nums.length; i++) {
-     if (Math.abs(nums[i]) < Math.abs(smallest) || 
-       (Math.abs(nums[i]) === Math.abs(smallest) && nums[i] > smallest)) {
+    if (
+      Math.abs(nums[i]) < Math.abs(smallest) ||
+      (Math.abs(nums[i]) === Math.abs(smallest) && nums[i] > smallest)
+    ) {
       smallest = nums[i];
-    }}
+    }
+  }
   console.log(smallest);
   return smallest;
 };
 
-findClosestNumber(nums);
+// findClosestNumber(nums);
+
+const x = 23;
+var sumOfTheDigitsOfHarshadNumber = function (x) {
+  let num = x;
+  let sum = 0;
+  while (x > 0) {
+    let r = x % 10;
+    sum += r;
+    x = Math.floor(x / 10);
+  }
+
+  if (num % sum === 0) {
+    return sum;
+  } else {
+    return -1;
+  }
+};
+
+const res = sumOfTheDigitsOfHarshadNumber(x);
+
+console.log(res);

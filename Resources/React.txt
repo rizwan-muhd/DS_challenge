@@ -1,0 +1,2 @@
+   what is App.js 
+-> In a React application created with Create React App, App.js is typically the main component file. It serves as the entry point for your application's UI and logic.
