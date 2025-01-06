@@ -79,6 +79,45 @@
 
 // console.log(abc);
 
-var abc = 200;
-let xyz = 500;
-console.log(window);
+// var abc = 200;
+// let xyz = 500;
+// console.log(window);
+// const demo = () => {
+//   //   "use strict";
+
+//   a = 100;
+//   console.log(a);
+// };
+
+// demo();
+
+// class abc {}
+// console.log(typeof abc);
+
+// const abc = 10 + isNaN(2) ? 100 : 200;
+// console.log(abc);
+// console.log(isNaN());
+
+// console.log(10 == 10);
+// console.log((10 == 10) == 10);
+// console.log(((10 == 10) == 10) == 10);
+// console.log((((10 == 10) == 10) == 10) == 10);
+
+// console.log(parseInt("100"));
+// console.log(Number(false));
+
+const call = new Promise((resolve, reject) => {
+  if (true) {
+    resolve("resolved");
+  } else {
+    reject("Rejected");
+  }
+});
+
+call
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
