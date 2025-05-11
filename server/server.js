@@ -110,24 +110,87 @@
 // const s = "hd fkdkjf sj  hello world jh ";
 // // rizwan am i
 
-const arr1 = [2, 6, 13, 5, 8];
+// const arr1 = [2, 6, 13, 5, 8];
 
-const findSecondLarge = () => {
-  let secondLarge = null;
-  let large = arr1[0];
-  for (let i = 1; i < arr1.length; i++) {
-    if (arr1[i] < large) {
-      secondLarge = large;
-      large = arr1[i];
-    } else if (
-      (secondLarge === null || arr1[i] < secondLarge) &&
-      arr1[i] > large
-    ) {
-      secondLarge = arr1[i];
-    }
-  }
+// const findSecondLarge = () => {
+//   let secondLarge = null;
+//   let large = arr1[0];
+//   for (let i = 1; i < arr1.length; i++) {
+//     if (arr1[i] < large) {
+//       secondLarge = large;
+//       large = arr1[i];
+//     } else if (
+//       (secondLarge === null || arr1[i] < secondLarge) &&
+//       arr1[i] > large
+//     ) {
+//       secondLarge = arr1[i];
+//     }
+//   }
 
-  console.log(secondLarge);
+//   console.log(secondLarge);
+// };
+
+// findSecondLarge(arr1);
+// const user = true;
+// const promise = new Promise((resoleve, reject) => {
+//   if (user) {
+//     resoleve("user succes");
+//   } else {
+//     reject("user");
+//   }
+// });
+// promise
+//   .then((data) => {
+//     console.log("see", data);
+//   })
+//   .catch((err) => {
+//     console.log("error", err);
+//   });
+
+const demo = async () => {
+  const userData = await fetch(
+    "https://jsonplaceholder.typicode.com/todos/1"
+  ).then((data) => {
+    console.log(data.body);
+  });
+
+  // const storeData = store();
 };
 
-findSecondLarge(arr1);
+demo();
+
+// monogdb connection
+const mongoose = require("mongoose");
+const axios = require("axios");
+
+mongoose.connect("https://mon").then;
+
+const thirdPartyData = async () => {
+  try {
+    const data = axios.get("http://www.google.com/data");
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const jsonData = [
+  {
+    name: "rizwan",
+    age: 24,
+  },
+  {
+    name: "muhammed",
+    age: 25,
+  },
+];
+
+//backend
+//server -> database
+// route -> (/get)
+// models -> user,prouct
+// service -> mongo upda ,
+// constroller->
+//doata
+
+//

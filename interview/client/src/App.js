@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import HeroSection from "./HomePage";
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Button,
+  Container,
+  Grid,
+  IconButton,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import SearchIcon from "@mui/icons-material/Search";
+import Services from "./Services";
+
+import AboutSection from "./AboutSection";
+import FAQSection from "./Faq";
+import PortfolioSection from "./Portfolio";
+import Footer from "./Footer";
+import StatsSection from "./Status";
+import Nav from "./Nav";
+import Banner from "./Banner";
+import ServicesSection from "./ServiceSection";
+import MissionVisionSection from "./Mission";
+import TodoApp from "./TodoApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Nav />
+      <Banner />
+      <AboutSection />
+      <Services />
+      <MissionVisionSection />
+      <StatsSection />
+      <ServicesSection />
+      <FAQSection />
+      <PortfolioSection />
+
+      <Footer /> */}
+      <TodoApp />
+    </>
   );
 }
 

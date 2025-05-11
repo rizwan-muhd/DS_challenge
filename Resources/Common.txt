@@ -1,3 +1,29 @@
-Difference between Framework and libarry
-->The main difference between a framework and a library is that a framework provides a structure for building an application, while a library is a collection of tools for performing specific tasks
--> Library contains modules 
+
+
+
+const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (editIndex !== null) {
+            const updatedItems = [...items];
+            updatedItems[editIndex] = formData;
+            setItems(updatedItems);
+            setEditIndex(null);
+        } else {
+            setItems([...items, formData]);
+        }
+        setFormData({ name: "", email: "" });
+    };
+
+    const handleEdit = (index) => {
+        setEditIndex(index);
+        setFormData(items[index]);
+    };
+
+    const handleDelete = (index) => {
+        setItems(items.filter((_, i) => i !== index));
+    };
