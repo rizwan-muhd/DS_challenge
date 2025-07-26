@@ -117,5 +117,7 @@ list.addLast(40);
 list.addFirst(100);
 list.addAt(2, 200);
 list.removeLast();
+console.time();
 list.print();
+console.timeEnd();
 console.log(list.size());

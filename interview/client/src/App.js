@@ -27,6 +27,7 @@ import Banner from "./Banner";
 import ServicesSection from "./ServiceSection";
 import MissionVisionSection from "./Mission";
 import TodoApp from "./TodoApp";
+import { Hook3s } from "./hooks";
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
       <PortfolioSection />
 
       <Footer /> */}
-      <TodoApp />
+      {/* <TodoApp /> */}
+      <Hook3s />
     </>
   );
 }
